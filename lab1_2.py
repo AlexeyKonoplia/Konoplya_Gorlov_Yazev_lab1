@@ -36,7 +36,7 @@ def matMulti(mat1,mat2):
 def matRang(mat):
     #т.к. мы работает с матрицами 3х3, их ранг 0..3
     #Проверка на ранг = 0
-    if all(mat[i][j] for i in range(len(mat)) for j in range(len(mat[i]))) == 0:
+    if all(mat[i][j] == 0 for i in range(len(mat)) for j in range(len(mat[i]))):
         return 0
     #Проверка на ранг = 3
     elif (mat[0][0]*mat[1][1]*mat[2][2] + mat[1][0]*mat[2][1]*mat[0][2] + \
